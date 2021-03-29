@@ -86,7 +86,6 @@ func (tb *testedBinaryModule) GenerateBuildActions(ctx blueprint.ModuleContext) 
 			"pkg":        tb.properties.TestPkg,
 		},
 	})
--
 }
 
 func GoBinFactory() (blueprint.Module, []interface{}) {
