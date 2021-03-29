@@ -12,7 +12,7 @@ addons:
 before_script:
   - cd ./build
   - go build ./cmd/bood/main.go
-
+ 
 script: 
   - ./main
   - cd ../example && ../build/out/bin/bood
