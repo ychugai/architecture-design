@@ -1,10 +1,14 @@
 go_binary {
-  // Module (and output) name.
   name: "bood",
+  pkg: "github.com/o1111001/architecture-design/build/cmd/bood",
+  testPkg: "github.com/o1111001/architecture-design/build/gomodule",
+  srcs: ["**/*.go", "../go.mod"],
+  srcsExclude: ["**/*_test.go"],
+  testSrcs: ["**/*_test.go"],
+}
 
-  // Go package to build.
-  pkg: "github.com/roman-mazur/design-practice-1-template/build/cmd/bood",
-
-  // Build inputs.
-  srcs: ["**/*.go", "../go.mod"]
+go_doc {
+ name: "gomodule",
+ pkg: "github.com/o1111001/architecture-design/build/gomodule",
+ srcs: ["**/*.go"]
 }
