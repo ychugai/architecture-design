@@ -1,0 +1,14 @@
+go_binary {
+  name: "bin",
+  pkg: "github.com/o1111001/architecture-design/example/bin",
+  testPkg: "github.com/o1111001/architecture-design/example/bin",
+  srcs: ["**/*.go", "../go.mod"],
+  srcsExclude: ["**/*_test.go"],
+  testSrcs: ["**/*_test.go"],
+}
+
+go_doc {
+ name: "docs",
+ pkg: "github.com/o1111001/architecture-design/example/docs",
+ srcs: ["**/*.go"]
+}
